@@ -3,15 +3,16 @@
 
 <head>
 
-  <meta charset="utf-8">
+	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-  <title>I_Theatrisic</title>
+	<title>I_Theatrisic</title>
 
-  <!-- Bootstrap core CSS -->
+	<!-- Bootstrap core CSS -->
     <link href="<?php echo base_url();?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
 
     <!-- Custom fonts for this template -->
     <link href="<?php echo base_url();?>assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -26,37 +27,23 @@
 
 </head>
 
-<body id="page-top">
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Admin</a>
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Data Barang</a>
+          <a href="#">Data Peminjaman</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-  <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
-      <div class="container">
-        <img src="assets/img/thea.png" width="180" height="50">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
-        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          Menu
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Home</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="<?php echo site_url();?>/Barang/">Barang</a>
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="">Login</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+	
     <br>
     <br>
     <br><br><br>
@@ -67,6 +54,30 @@
       
      </div>
    </div>
+   <div class="container">
+     <a href="" class="btn btn-info my-3" ><span class="glyphicon glyphicon-plus">Add Barang</span></a>
+
+   </div>
+   <main role="main" class="container">
+   <table class="table table-hover table-bordered">
+     <thead>
+       <tr>
+         <th>Id</th>
+         <th>Nama Barang</th>
+         <th>Kondisi</th>
+         <th>Jumlah</th>
+         <th>Gambar</th>
+         <th>Status</th>
+         <th>Action</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td></td>
+       </tr>
+     </tbody>
+   </table>
+   </main>
 
 <!-- Bootstrap core JavaScript -->
     <script src="<?php echo base_url();?>assets/vendor/jquery/jquery.min.js"></script>
