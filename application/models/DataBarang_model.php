@@ -20,5 +20,11 @@
 						);
 					$this->db->insert('tabel_barang', $object);
 			}
+		public function delete($id_barang)
+		{
+			if ($this->db->delete("tabel_barang","id_barang = ".$id_barang)) {
+			return true;
+		}
+		}
 	}
 ?>
