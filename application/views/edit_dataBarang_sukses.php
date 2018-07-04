@@ -53,16 +53,18 @@
     </div>
   </div>
 </nav>
-
-	
-    <br>
+	  <br>
     <br>
     
     <div class="container">
    <div class="jumbotron shadow p-3 mb-5 bg-white rounded">
      
        <h1>Data Barang</h1>
-      
+      <?php 
+        echo "Sukses Simpan Data";
+
+        echo anchor('DataBarang', 'Masukan Data Lagi'); 
+      ?>
      </div>
    </div>
    
