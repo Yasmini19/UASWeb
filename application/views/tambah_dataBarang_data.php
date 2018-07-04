@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -12,7 +10,6 @@
 
 	<!-- Bootstrap core CSS -->
     <link href="<?php echo base_url();?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
 
     <!-- Custom fonts for this template -->
     <link href="<?php echo base_url();?>assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -53,57 +50,24 @@
     </div>
   </div>
 </nav>
-
-	
     <br>
     <br>
     
-    <div class="container">
+  <div class="container">
    <div class="jumbotron shadow p-3 mb-5 bg-white rounded">
      
        <h1>Data Barang</h1>
-      
+      <?php 
+        echo "Sukses Simpan Data";
+
+        echo anchor('DataBarang', 'Masukan Data Lagi'); 
+      ?>
+     
+  </div>
+  </div>
      </div>
    </div>
-   <div class="container ">
-     <a href="<?php echo site_url('/DataBarang/create') ?>" class="btn btn-info my-3 shadow p-3 mb-5 bg-white rounded" ><span class="glyphicon glyphicon-plus"><font color="black">Add Barang</font></span></a>
-
-   </div>
-   <main role="main" class="container">
-   <table class="table" back>
-    <thead class="thead-dark">
-       <tr>
-         <th>Id</th>
-         <th>Nama Barang</th>
-         <th>Kondisi</th>
-         <th>Jumlah</th>
-         <th>Gambar</th>
-         <th>Status</th>
-         <th>Action</th>
-       </tr>
-     </thead>
-     <tbody style="background-color: white">
-      <?php foreach ($data_list as $key => $value): ?>
-       <tr>
-          <td><?php echo $value->id_barang ?></td>
-          <td><?php echo $value->nama_barang ?></td>
-          <td><?php echo $value->kondisi ?></td>
-          <td><?php echo $value->jumlah ?></td>
-          <td><img src="<?php echo base_url()?>assets/uploads/<?php echo $value->gb_barang?>" alt="" width=100 height=100></td>
-          <td><?php echo $value->status ?></td>
-
-          <td>
-                <a href="<?php echo site_url("/dataBarang/updateData/" .$value->id_barang) ?>" class="btn btn-sm btn-success">Update</a>
-
-                <a href="<?php echo site_url("/DataBarang/deleteData/".$value->id_barang) ?>" class="btn btn-sm btn-danger">Delete</a>
-                
-              </td>
-         
-       </tr>
-       <?php endforeach ?>
-     </tbody>
-   </table>
-   </main>
+   
 
 <!-- Bootstrap core JavaScript -->
     <script src="<?php echo base_url();?>assets/vendor/jquery/jquery.min.js"></script>
