@@ -19,17 +19,32 @@ class DataBarang extends CI_Controller {
 		$this->form_validation->set_rules('nama_barang', 'Nama Barang', 'trim|required');
 		$this->form_validation->set_rules('kondisi', 'Kondisi', 'trim|required');
 		$this->form_validation->set_rules('jumlah', 'Jumlah', 'trim|required');
-		$this->form_validation->set_rules('gb_barang', 'Gambar Barang', 'trim|required');
+//		$this->form_validation->set_rules('gb_barang', 'Gambar Barang', 'trim|required');
 		$this->form_validation->set_rules('status', 'Status', 'trim|required');
 
 		if ($this->form_validation->run()==FALSE)
 		{
 			$this->load->view('tambah_dataBarang_view');
 		}else{
-			$this->DataBarang_model->insertDataBarang();
-			$this->load->view('tambah_dataBarang_data');
+			$config['upload_path']     = './assets/upload';
+			$config['allowed_types']  = 'gif|jpg|png';
+			$config['max_size']		   = 1000000000;
+			$config['max_width']       = 10240;
+			$config['max_height']	   = 7680;
+
+			$this->load->library('upload',$config);
+			if (! $this->upload->do_upload('gb_barang'))
+			{
+				$error = array('error' => $this->upload->display_errors());
+				$this->load->view('tambah_dataBarang_data',$error);
+			}
+			else
+			{
+				$this->DataBarang_model->insertDataBarang();
+				$this->load->view('tambah_dataBarang_view');
 		}
 	}
+}
 
 	public function updateData($id)
 	{
@@ -49,7 +64,7 @@ class DataBarang extends CI_Controller {
 			$config['upload_path']	= './assets/upload/';
 			$config['allowed_types']= 'gif|jpg|png';
 			$config['max_size']		= '1000000000';
-			$config['max_weidth']	= '10240';
+			$config['max_width']	= '10240';
 			$config['max_height']	= '7680';
 
 			$this->load->library('upload', $config);

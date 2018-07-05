@@ -22,7 +22,7 @@
 						'nama_barang' => $this->input->post('nama_barang'),
 						'kondisi' => $this->input->post('kondisi'),
 						'jumlah' => $this->input->post('jumlah'),
-						'gb_barang' => $this->input->post('gb_barang'),
+						'gb_barang' => $this->upload->data('file_name'),
 						'status' => $this->input->post('status')
 						);
 					$this->db->insert('tabel_barang', $object);
@@ -31,7 +31,6 @@
 		public function updateById($id_barang)
 		{
 		$data = array(
-			//'id_barang' => $this->input->post('id_barang'),
 			'nama_barang' => $this->input->post('nama_barang'),
 			'kondisi' => $this->input->post('kondisi'),
 			'jumlah' => $this->input->post('jumlah'),

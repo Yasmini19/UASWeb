@@ -52,23 +52,32 @@
 </nav>
     <br>
     <br>
-    
+    <div class="container">
+    <div class="jumbotron">
+      
+       <h1>Data Barang</h1>
+        </p>
+      </div>
+    </div>
+
     <div class="container">
    <div class="jumbotron shadow p-3 mb-5 bg-white rounded">
      
-       <h1>Data Barang</h1>
       <div class="container">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <?php echo form_open('DataBarang/create/'.$this->uri->segment(3)); ?>
+    <?php echo form_open_multipart('DataBarang/create'); ?>
     <legend>Tambah Data Barang</legend>
     <?php echo validation_errors(); ?>
     <div class="form-group">
           <label for="">Nama Barang</label>
         <input type="text" class="form-control" name="nama_barang" placeholder="Input field">
+        <br>
         <label for="">Kondisi</label>
         <input type="text" class="form-control" name="kondisi" placeholder="Input field">
+        <br>
         <label for="">Jumlah</label>
         <input type="text" class="form-control" name="jumlah" placeholder="input field">
+        <br>
             <label for="">Gambar Barang</label>
         <input type="file" class="form-control" name="gb_barang">
         <label for="">Status</label>
