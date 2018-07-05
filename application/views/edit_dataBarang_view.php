@@ -59,32 +59,33 @@
        <h1>Data Barang</h1>
       <div class="container">
   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <?php echo form_open('DataBarang/update/'.$this->uri->segment(3)); ?>
+    <?php echo form_open_multipart('dataBarang/updateData/'.$this->uri->segment(3)); ?>
     <legend>Edit Data Barang</legend>
     <?php echo validation_errors(); ?>
     <div class="form-group">
       <label for="">Id Barang</label>
-      <input type="text" class="form-control" name="id_barang" id="id_barang" value="<?php echo $tabel_barang[0]->id_barang ?>" placeholder="Input field">
+      <input type="text" class="form-control" name="id_barang" id="id_barang" value="<?php echo $tabel_barang[0]->id_barang?>">
     </div>
     <div class="form-group">
       <label for="">Nama Barang</label>
-      <input type="text" class="form-control" name="nama_barang" id="nama_barang" value="<?php echo $tabel_barang[0]->nama_barang ?>" placeholder="Input field">
+      <input type="text" class="form-control" name="nama_barang" id="nama_barang" value="<?php echo $tabel_barang[0]->nama_barang ?>">
     </div>
     <div class="form-group">
       <label for="">Kondisi</label>
-      <input type="text" class="form-control" name="kondisi" id="kondisi" value="<?php echo $tabel_barang[0]->kondisi ?>" placeholder="Input field">
+      <input type="text" class="form-control" name="kondisi" id="kondisi" value="<?php echo $tabel_barang[0]->kondisi ?>">
     </div>
     <div class="form-group">
       <label for="">Jumlah</label>
-      <input type="text" class="form-control" name="jumlah" id="jumlah" value="<?php echo $tabel_barang[0]->jumlah ?>" placeholder="Input field">
+      <input type="text" class="form-control" name="jumlah" id="jumlah" value="<?php echo $tabel_barang[0]->jumlah ?>">
     </div>
     <div class="form-group">
       <label for="">Gambar Barang</label>
-      <input type="file" class="form-control" name="hrgSewa" id="hrgSewa" value="<?php echo $tabel_barang[0]->gb_barang ?>" placeholder="Input field">
+      <br>
+      <input type="file" name="gb_barang" id="gb_barang" size="20" value="<?php echo $tabel_barang[0]->gb_barang ?>">
     </div>
     <div class="form-group">
       <label for="">Status</label>
-      <input type="text" class="form-control" name="status" id="status" value="<?php echo $tabel_barang[0]->status ?>" placeholder="Input field">
+      <input type="text" class="form-control" name="status" id="status" value="<?php echo $tabel_barang[0]->status ?>">
     </div>
       <br>
     <button type="submit" class="btn btn-success">Submit</button>

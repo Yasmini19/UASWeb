@@ -62,8 +62,8 @@
        <h1>Data Barang</h1>
       <?php 
         echo "Sukses Simpan Data";
-
-        echo anchor('DataBarang', 'Masukan Data Lagi'); 
+        echo "";
+        echo '<br>'.anchor('DataBarang', 'Masukkan Data Lagi'); 
       ?>
      </div>
    </div>

@@ -9,6 +9,13 @@
 			return $query->result();
 		}
 
+		public function getBarang($id)
+		{
+			$this->db->where('id_barang',$id);
+			$query = $this->db->get("tabel_barang");
+			return $query->result();
+		}
+
 		public function insertDataBarang()
 		{
 				$object = array(
@@ -28,12 +35,12 @@
 			'nama_barang' => $this->input->post('nama_barang'),
 			'kondisi' => $this->input->post('kondisi'),
 			'jumlah' => $this->input->post('jumlah'),
-			'gb_barang' => $this->input->post('gb_barang'),
+			'gb_barang' => $this->upload->data('file_name'),
 			'status' => $this->input->post('status'),
 		);
 
 		$this->db->where('id_barang', $id_barang);
-		$this->db->updatedata('tabel_barang', $data);
+		$this->db->update('tabel_barang', $data);
 		}
 
 		public function delete($id_barang)
