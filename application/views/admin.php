@@ -3,14 +3,14 @@
 
 <head>
 
-	<meta charset="utf-8">
+  <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
 
-	<title>I_Theatrisic</title>
+  <title>I_Theatrisic</title>
 
-	<!-- Bootstrap core CSS -->
+  <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url();?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
@@ -25,60 +25,38 @@
     <!-- Custom styles for this template -->
     <link href="<?php echo base_url();?>assets/css/freelancer.min.css" rel="stylesheet">
 
+    <style type="text/css">
+      body{
+        background-color: #e8e8e8;
+      }
+
+      table {
+        background-color: white;
+      }
+    </style>
+
 </head>
 
-<body>
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Admin</a>
-      <ul class="nav navbar-nav">
-        <li class="active">
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">Data Barang</a>
-          <a href="#">Data Peminjaman</a>
-        </li>
-      </ul>
+<body bgcolor="#e8e8e8">
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">Data Barang</a>
+      <a class="nav-item nav-link" href="#">Data Peminjaman</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
-	
-    <br>
-    <br>
-    <br><br><br>
-    <div class="container">
-   <div class="jumbotron">
-     
-       <h1>Data Barang</h1>
-      
-     </div>
-   </div>
-   <div class="container">
-     <a href="" class="btn btn-info my-3" ><span class="glyphicon glyphicon-plus">Add Barang</span></a>
-
-   </div>
-   <main role="main" class="container">
-   <table class="table table-hover table-bordered">
-     <thead>
-       <tr>
-         <th>Id</th>
-         <th>Nama Barang</th>
-         <th>Kondisi</th>
-         <th>Jumlah</th>
-         <th>Gambar</th>
-         <th>Status</th>
-         <th>Action</th>
-       </tr>
-     </thead>
-     <tbody>
-       <tr>
-         <td></td>
-       </tr>
-     </tbody>
-   </table>
-   </main>
-
+  
+  
+    
 <!-- Bootstrap core JavaScript -->
     <script src="<?php echo base_url();?>assets/vendor/jquery/jquery.min.js"></script>
     <script src="<?php echo base_url();?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

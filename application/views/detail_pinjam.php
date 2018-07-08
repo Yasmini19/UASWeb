@@ -92,7 +92,7 @@
     <main class="app-content">
       <div class="app-title">
         <div>
-          <h1><i class="fa fa-th-list"></i> Data Barang</h1>
+          <h1><i class="fa fa-th-list"></i> Detail_Pinjam</h1>
           
         </div>
         <ul class="app-breadcrumb breadcrumb">
@@ -101,31 +101,25 @@
         </ul>
       </div>
       
-   <div class="container ">
-     <a href="<?php echo site_url('/DataBarang/create') ?>" class="btn btn-info my-3 shadow p-3 mb-5 bg-white rounded" ><span class="glyphicon glyphicon-plus"><font color="black">Add Barang</font></span></a>
-
-   </div>
    <main role="main" class="container">
    <table class="table" back>
     <thead class="thead-dark">
        <tr>
-         <th>Id</th>
-         <th>Nama Barang</th>
-         <th>Kondisi</th>
-         <th>Jumlah</th>
-         <th>Gambar</th>
+         <th>Id Detail</th>
+         <th>Id Pinjam</th>
+         <th>Id Barang</th>
+         <th>Jumlah Pinjam</th>
          <th>Status</th>
          <th>Action</th>
        </tr>
      </thead>
      <tbody style="background-color: white">
-      <?php foreach ($data_list as $key => $value): ?>
+      <?php foreach ($detail_list as $key => $value): ?>
        <tr>
+          <td><?php echo $value->id_detail ?></td>
+           <td><?php echo $value->id_pinjam ?></td>
           <td><?php echo $value->id_barang ?></td>
-          <td><?php echo $value->nama_barang ?></td>
-          <td><?php echo $value->kondisi ?></td>
-          <td><?php echo $value->jumlah ?></td>
-          <td><img src="<?php echo base_url()?>assets/upload/<?php echo $value->gb_barang?>" alt="" width=100 height=100></td>
+          <td><?php echo $value->jumlah_pinjam ?></td>
           <td><?php echo $value->status ?></td>
 
           <td>
