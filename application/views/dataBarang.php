@@ -103,6 +103,7 @@
       
    <div class="container ">
      <a href="<?php echo site_url('/DataBarang/create') ?>" class="btn btn-info my-3 shadow p-3 mb-5 bg-white rounded" ><span class="glyphicon glyphicon-plus"><font color="black">Add Barang</font></span></a>
+     <a href="<?php echo site_url('/Buatpdf/createPdf') ?>" class="btn btn-info my-3 shadow p-3 mb-5 bg-white rounded" ><span class="glyphicon glyphicon-plus"><font color="black">Add Pdf</font></span></a>
 
    </div>
    <main role="main" class="container">
