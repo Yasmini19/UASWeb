@@ -1,7 +1,7 @@
 $(function() {
   $.ajax({
     type: "GET",
-    url: "getAllPegawai/"
+    url: "getAllUser/"
   }).done(function(countries) {
     countries.unshift({ id: "0", name: "" });
 
@@ -21,14 +21,14 @@ $(function() {
         loadData: function(filter) {
           return $.ajax({
             type: "GET",
-            url: "getAllDetail/",
+            url: "getAllUser/",
             data: filter
           });
         },
         insertItem: function(item) {
           return $.ajax({
             type: "POST",
-            url: "addDetail/",
+            url: "addUser/",
             data: item
           });
         },
@@ -42,39 +42,33 @@ $(function() {
         deleteItem: function(item) {
           return $.ajax({
             type: "POST",
-            url: "deleteDetail/",
+            url: "deleteUser/",
             data: item
           });
         }
       },
       fields: [
         {
-          name: "id_detail",
-          title: "Id Detail",
+          name: "id_user",
+          title: "Id User",
           type: "text",
-          width: 150
+          width: 50
         },
         {
-          name: "id_pinjam",
-          title: "Id Pinjam",
+          name: "nama",
+          title: "Nama User",
           type: "text",
           width: 50
         },
          {
-          name: "id_barang",
-          title: "Id Barang",
+          name: "organisasi",
+          title: "Organisasi",
           type: "text",
           width: 50
         },
          {
-          name: "jumlah_pinjam",
-          title: "Jumlah Pinjam",
-          type: "text",
-          width: 50
-        },
-         {
-          name: "status",
-          title: "Status",
+          name: "no_hp",
+          title: "No Hp",
           type: "text",
           width: 50
         },

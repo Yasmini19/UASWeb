@@ -36,7 +36,7 @@
     <div class="jumbotron">
       <?php echo form_open('Login/register'); ?>
         <legend><b>Hi, Orang Baik!</b></legend>
-        <legend>Silahkan login untuk mengakses semua fitur WeCare.id</legend>
+        <legend>Silahkan login untuk mengakses semua fitur Inventaris Theatrisic</legend>
           <?php echo validation_errors()?>
             <div class="form-group">
             <label for="nama">Nama</label>

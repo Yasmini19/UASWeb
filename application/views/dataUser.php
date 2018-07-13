@@ -1,38 +1,40 @@
 <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Data User </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>assets/jsgrid/jsgrid.min.css" />
+    <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>assets/jsgrid/jsgrid-theme.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="<?php echo base_url()?>assets/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url()?>assets/jsgrid/jsgrid.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url()?>assets/custom/grid.js"></script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
     
     <!-- Main CSS-->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/admin/css/main.css">
+
+    <!-- jsgrid-->
+    <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>assets/jsgrid/jsgrid.min.css" />
+    <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>assets/jsgrid/jsgrid-theme.min.css" />
+    <script type="text/javascript" src="<?php echo base_url()?>assets/jsgrid/jsgrid.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url()?>assets/custom/grid.js"></script>
+    
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-      <!-- Bootstrap core CSS -->
-    <link href="<?php echo base_url();?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo base_url('') ?>assets/datatables.min.css">
-    <script src="<?php echo base_url();?>assets/js/datatable/datatables.min.js"></script>
-
-    <!-- Custom fonts for this template -->
-    <link href="<?php echo base_url();?>assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- Plugin CSS -->
-    <link href="<?php echo base_url();?>assets/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-
-    <!-- Custom styles for this template -->
-    <link href="<?php echo base_url();?>assets/css/freelancer.min.css" rel="stylesheet">
-
-    <style type="text/css">
-      body{
-        background-color: #e8e8e8;
-      }
-
-      table {
-        background-color: white;
-      }
-    </style>
-
   </head>
   <body class="app sidebar-mini rtl">
     <!-- Navbar-->
@@ -110,11 +112,11 @@
         <li class="treeview"><a class="app-menu__item" href="<?php echo base_url('index.php/DataBarang/')?>" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Data Barang</span><i class="treeview-indicator fa fa-angle-right"></i></a>
           
         </li>
-        <li class="treeview"><a class="app-menu__item active" href="<?php echo base_url('index.php/DataPeminjaman/')?>" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Data Peminjaman</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+        <li class="treeview"><a class="app-menu__item" href="<?php echo base_url('index.php/DataPeminjaman/')?>" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Data Peminjaman</span><i class="treeview-indicator fa fa-angle-right"></i></a>
           
         </li>
 
-        <li class="treeview"><a class="app-menu__item" href="<?php echo base_url('index.php/User/getUser')?>" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Data User</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+        <li class="treeview"><a class="app-menu__item active" href="<?php echo base_url('index.php/Uset/getUser')?>" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Data User</span><i class="treeview-indicator fa fa-angle-right"></i></a>
           
         </li>
         
@@ -123,7 +125,7 @@
     <main class="app-content">
       <div class="app-title">
         <div>
-          <h1><i class="fa fa-th-list"></i> Data Peminjaman</h1>
+          <h1><i class="fa fa-th-list"></i> Data User</h1>
           
         </div>
         <ul class="app-breadcrumb breadcrumb">
@@ -131,62 +133,83 @@
           <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
         </ul>
       </div>
-
-<body bgcolor="#e8e8e8">
-
     
-   <div class="container ">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-    <div class="table-responsive">
-   <table class="table table-hover" id="example">
-    <thead class="thead-dark">
-       <tr>
-         <th>Id Pinjam</th>
-         <th>Id User</th>
-         <th>Keperluan</th>
-         <th>Tanggal Pinjam</th>
-         <th>Tanggal Kembali</th>
-         <th>Action</th>
-       </tr>
-     </thead>
-     <tbody style="background-color: white">
-      <?php foreach ($peminjaman_list as $key => $value): ?>
-       <tr>
-          <td><?php echo $value->id_pinjam ?></td>
-          <td><?php echo $value->id_user ?></td>
-          <td><?php echo $value->keperluan ?></td>
-          <td><?php echo $value->tanggal_pinjam ?></td>
-          <td><?php echo $value->tanggal_kembali ?></td>
-          <td>
-                <a href="<?php echo site_url("Detail_Pinjam/detail/").$value->id_pinjam ?>" type="button" class="btn btn-info">Detail</a>
-          </td>
-       </tr>
-      <?php endforeach ?>
-     </tbody>
-   </table>
- </div>
-</div>
-   </main>
+    <div class="container">
+        <div id="jsGrid">
+        </div>
+    </div>
 
-<!-- Bootstrap core JavaScript -->
-    <script src="<?php echo base_url();?>assets/vendor/jquery/jquery.min.js"></script>
-    <script src="<?php echo base_url();?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="<?php echo base_url('') ?>assets/datatables.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="<?php echo base_url();?>assets/vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="<?php echo base_url();?>assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="<?php echo base_url();?>assets/js/jqBootstrapValidation.js"></script>
-    <script src="<?php echo base_url();?>assets/js/contact_me.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="<?php echo base_url();?>assets/js/freelancer.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('#example').DataTable();
-      } );
+    <!-- Essential javascripts for application to work-->
+    <script src="<?php echo base_url();?>asset/admin/js/jquery-3.2.1.min.js"></script>
+    <script src="<?php echo base_url();?>asset/admin/js/popper.min.js"></script>
+    <script src="<?php echo base_url();?>asset/admin/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url();?>asset/admin/js/main.js"></script>
+    <!-- The javascript plugin to display page loading on top-->
+    <script src="<?php echo base_url();?>asset/admin/js/plugins/pace.min.js"></script>
+    <!-- Page specific javascripts-->
+    <script type="<?php echo base_url();?>asset/admin/text/javascript" src="js/plugins/chart.js"></script>
+    <script type="<?php echo base_url();?>asset/admin/text/javascript">
+      var data = {
+        labels: ["January", "February", "March", "April", "May"],
+        datasets: [
+          {
+            label: "My First dataset",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: [65, 59, 80, 81, 56]
+          },
+          {
+            label: "My Second dataset",
+            fillColor: "rgba(151,187,205,0.2)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(151,187,205,1)",
+            data: [28, 48, 40, 19, 86]
+          }
+        ]
+      };
+      var pdata = [
+        {
+          value: 300,
+          color: "#46BFBD",
+          highlight: "#5AD3D1",
+          label: "Complete"
+        },
+        {
+          value: 50,
+          color:"#F7464A",
+          highlight: "#FF5A5E",
+          label: "In-Progress"
+        }
+      ]
+      
+      var ctxl = $("#lineChartDemo").get(0).getContext("2d");
+      var lineChart = new Chart(ctxl).Line(data);
+      
+      var ctxp = $("#pieChartDemo").get(0).getContext("2d");
+      var pieChart = new Chart(ctxp).Pie(data);
     </script>
-</body>
+    <!-- Google analytics script-->
+    <script type="<?php echo base_url();?>asset/admin/text/javascript">
+      if(document.location.hostname == 'pratikborsadiya.in') {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-72504830-1', 'auto');
+        ga('send', 'pageview');
+      }
+    </script>
+  </body>
 </html>
+
+
+
+
+

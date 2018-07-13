@@ -14,6 +14,10 @@
             # code...
             $this->session->unset_userdata('logged_in');
             $this->session->sess_destroy();
+            session_start();
+            unset($_SESSION['cart']);
+            session_destroy();
+            session_unset();
             redirect('tabel_user','refresh');
         }
 
@@ -55,7 +59,7 @@
                 if ($data['level'] == 'Pengguna') {
                     redirect('dashboard','refresh');
                 }else{
-                    redirect('dataBarang','refresh');
+                    redirect('HomeAdmin','refresh');
                 }
             }
         }

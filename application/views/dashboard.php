@@ -31,7 +31,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
       <div class="container">
-        <img src="assets/img/thea.png" width="180" height="50">
+        <img src="<?php echo base_url()?>assets/img/thea.png" width="180" height="50">
         <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
         <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
@@ -52,8 +52,17 @@
               <a class="nav-link py-3 px-0 px-lg-3 rounded" href="<?php echo site_url();?>/Barang/">Barang</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="<?php echo base_url('index.php/Login')?>">Login</a>
+            <div class="btn-group open" style="padding-bottom: -5px; padding-top:10px">
+                <a class="btn btn-primary" href="#"><i class="fa fa-user fa-fw"></i><b><?php echo $this->session->userdata('logged_in')['username']?></b></a>
+                <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"> 
+            </a>
+                <ul class="dropdown-menu">
+                <li><a href="<?php echo site_url();?>/Login/"><i class="fa fa-user fa-fw"></i> LOGOUT</a></li>
+              </ul>
+            </div>
             </li>
+
+            
           </ul>
         </div>
       </div>
@@ -83,7 +92,7 @@
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="assets/img/gitar.jpg" alt="" >
+              <img class="img-fluid" src="<?php echo base_url()?>assets/img/gitar.jpg" alt="" >
               <a>Gitar</a>
             </a>
           </div>
@@ -94,7 +103,7 @@
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="assets/img/kajon.jpg" alt="">
+              <img class="img-fluid" src="<?php echo base_url()?>assets/img/kajon.jpg" alt="">
               <a>Kajon</a>
             </a>
           </div>
@@ -105,7 +114,7 @@
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="assets/img/backdropP.jpeg" alt="">
+              <img class="img-fluid" src="<?php echo base_url()?>assets/img/backdropP.jpeg" alt="">
               <a>Backdrop</a>
             </a>
           </div>
@@ -116,7 +125,7 @@
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="assets/img/lampu.jpg" alt="">
+              <img class="img-fluid" src="<?php echo base_url()?>assets/img/lampu.jpg" alt="">
               <a>Lampu</a>
             </a>
           </div>
@@ -127,7 +136,7 @@
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="assets/img/mic.jpg" alt="">
+              <img class="img-fluid" src="<?php echo base_url()?>assets/img/mic.jpg" alt="">
               <a>Mic</a>
             </a>
           </div>
@@ -138,7 +147,7 @@
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
-              <img class="img-fluid" src="assets/img/wing.jpg" alt="" height="750" width="750">
+              <img class="img-fluid" src="<?php echo base_url()?>assets/img/wing.jpg" alt="" height="750" width="750">
               <a>Wing</a>
             </a>
           </div>

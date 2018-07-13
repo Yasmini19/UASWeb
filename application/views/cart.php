@@ -51,7 +51,7 @@
               <a class="nav-link py-3 px-0 px-lg-3 rounded" href="<?php echo site_url();?>/Barang/">Barang</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="<?php echo site_url();?>/Pinjam/cart/"><i class="fa fa-shopping-cart fa-lg"></i></a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded" href="<?php echo site_url();?>/Cart/"><i class="fa fa-shopping-cart fa-lg"></i></a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
             <div class="btn-group open" style="padding-bottom: -5px; padding-top:10px">
@@ -63,39 +63,86 @@
               </ul>
             </div>
             </li>
-
-            
           </ul>
         </div>
       </div>
     </nav>  
-    <div class="container" style="padding-top: 200px">
-      <div class="row">
-       <?php foreach ($data_list as $key => $value): ?>
-        <div class="col-4">
-        <div class="container">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="<?php echo base_url()?>./assets/upload/<?php echo $value->gb_barang?>" alt="Card image cap" width="100px" height="200px">
-          <div class="card-body"> <hr>
-            <p class="card-text"><?php echo $value->nama_barang ?></p>
-            <?php echo form_open('Pinjam/add')?>
-            <input type="text" value="<?php echo $value->id_barang?>" name="id">
-            <input type="text" value="<?php echo $value->nama_barang?>" name="nama">
-        
-            <button type="submit" class="btn btn-primary btn-lg " value="Pinjam">Pinjam</button>
-          <?php echo form_close()?>
-          </div>
-        </div> &nbsp; &nbsp; &nbsp; </br></div></div>
-        <?php endforeach ?>
-      </div>
-    </div>
 
+    <br><br><br><br><br><br><br>
+    <main role="main" class="container">
+   <table class="table" back>
+    <thead class="thead-dark">
+       <tr>
+         <th>Id</th>
+         <th>Nama Barang</th>
+         <th>Jumlah</th>
+         <th>Action</th>
+       </tr>
+     </thead>
+     <tbody style="background-color: white">
+      <?php foreach ($carts as $key): ?>
+       <tr>
+          <td><?php echo $key['id'] ?></td>
+          <td><?php echo $key['name'] ?></td>
+          <td><?php echo $key['qty'] ?></td>
+
+          <td>
+
+                <button><a href="<?php echo site_url("/Pinjam/delete/".$key['rowid']) ?>" class="fa fa-trash fa-2x" aria-hidden="true"></a></button>
+                
+              </td>
+         
+       </tr>
+       <?php endforeach ?>
+     </tbody>
+   </table>
+   </main>
+
+<div class="container-fluid">
+   <a href="<?php echo base_url('index.php/Pinjam/')?>" type="submit" class="btn btn-primary btn-lg " value="Pinjam" data-toggle="modal" data-target="#modalPinjam" >Pinjam</a>
+</div>
     <!-- Button trigger modal -->
 
-<!-- Modal -->
+    
 
+<!-- Modal -->
+<div class="modal fade" id="modalPinjam" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Form Peminjaman</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      
+      <div class="modal-body">
+        <form>
+  
+  <div class="form-group row">
+    <label for="colFormLabel" class="col-sm-2 col-form-label">Keperluan</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="colFormLabel">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="colFormLabel" class="col-sm-2 col-form-label">Tanggal Pinjam</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="colFormLabel">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="colFormLabel" class="col-sm-2 col-form-label">Tanggal Kembali</label>
+    <div class="col-sm-10">
+      <input type="date" class="form-control" id="colFormLabel">
+    </div>
+  </div>
+  
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
     </div>
   </div>
 </div>

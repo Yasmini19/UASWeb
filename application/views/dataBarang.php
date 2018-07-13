@@ -77,13 +77,17 @@
         </div>
       </div>
       <ul class="app-menu">
-        <li><a class="app-menu__item active" href="index.html"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a></li>
+        <li><a class="app-menu__item " href="<?php echo base_url('index.php/HomeAdmin/')?>"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a></li>
         
         
-        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Data Barang</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+        <li class="treeview"><a class="app-menu__item active"  href="<?php echo base_url('index.php/DataBarang/')?>" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Data Barang</span><i class="treeview-indicator fa fa-angle-right"></i></a>
           
         </li>
-        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Data Peminjaman</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+        <li class="treeview"><a class="app-menu__item" href="<?php echo base_url('index.php/DataPeminjaman/')?>" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Data Peminjaman</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+          
+        </li>
+
+        <li class="treeview"><a class="app-menu__item" href="<?php echo base_url('index.php/User/getUser')?>" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Data User</span><i class="treeview-indicator fa fa-angle-right"></i></a>
           
         </li>
         
@@ -126,7 +130,7 @@
           <td><?php echo $value->nama_barang ?></td>
           <td><?php echo $value->kondisi ?></td>
           <td><?php echo $value->jumlah ?></td>
-          <td><img src="<?php echo base_url()?>assets/upload/<?php echo $value->gb_barang?>" alt="" width=100 height=100></td>
+          <td><img src="<?php echo base_url()?>./assets/upload/<?php echo $value->gb_barang?>" alt="" width=100 height=100></td>
           <td><?php echo $value->status ?></td>
 
           <td>
