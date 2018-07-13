@@ -76,24 +76,22 @@
    <table class="table" back>
     <thead class="thead-dark">
        <tr>
-         <th>Id</th>
-         <th>Nama Barang</th>
-         <th>Jumlah</th>
-         <th>Action</th>
+         <th>ID Pinjam</th>
+         <th>ID User</th>
+         <th>Keperluan</th>
+         <th>Tanggal Pinjam</th>
+         <th>Tanggal Kembali</th>
+         <th>Status</th>
        </tr>
      </thead>
      <tbody style="background-color: white">
-      <?php foreach ($carts as $key): ?>
+      <?php foreach ($cekData as $key): ?>
        <tr>
-          <td><?php echo $key['id'] ?></td>
-          <td><?php echo $key['name'] ?></td>
-          <td><?php echo $key['qty'] ?></td>
-
-          <td>
-
-                <button><a href="<?php echo site_url("/Pinjam/delete/".$key['rowid']) ?>" class="fa fa-trash fa-2x" aria-hidden="true"></a></button>
-                
-              </td>
+          <td><?php echo $key['id_pinjam'] ?></td>
+          <td><?php echo $key['id_user'] ?></td>
+          <td><?php echo $key['keperluan'] ?></td>
+          <td><?php echo $key['tanggal_pinjam'] ?></td>
+          <td><?php echo $key['tanggal_kembali'] ?></td>
          
        </tr>
        <?php endforeach ?>
@@ -101,53 +99,13 @@
    </table>
    </main>
 
-<div class="container-fluid">
-   <a href="<?php echo base_url('index.php/Pinjam/')?>" type="submit" class="btn btn-primary btn-lg " value="Pinjam" data-toggle="modal" data-target="#modalPinjam" >Pinjam</a>
-</div>
+
     <!-- Button trigger modal -->
 
     
 
 <!-- Modal -->
-<div class="modal fade" id="modalPinjam" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Form Peminjaman</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-  
-  <div class="form-group row">
-    <label for="colFormLabel" class="col-sm-2 col-form-label">Keperluan</label>
-    <div class="col-sm-10">
-      <input type="text" id="keperluan" name="keperluan" class="form-control" id="colFormLabel">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="colFormLabel" class="col-sm-2 col-form-label">Tanggal Pinjam</label>
-    <div class="col-sm-10">
-      <input type="date" id="tanggal_pinjam" name="tanggal_pinjam" class="form-control" id="colFormLabel">
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="colFormLabel" class="col-sm-2 col-form-label">Tanggal Kembali</label>
-    <div class="col-sm-10">
-      <input type="date" id="tanggal_kembali" name="tanggal_kembali" class="form-control" id="colFormLabel">
-    </div>
-  </div>
-  
-</form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Submit</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 <!-- Bootstrap core JavaScript -->
     <script src="<?php echo base_url();?>assets/vendor/jquery/jquery.min.js"></script>
     <script src="<?php echo base_url();?>assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

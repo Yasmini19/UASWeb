@@ -1,57 +1,135 @@
+
+
+  <!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<head>
+<title>Inventaris Theatrisic</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Credit Login / Register Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="<?php echo base_url();?>assets/login/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="<?php echo base_url();?>assets/login/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+<link href="<?php echo base_url();?>assets/login/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="<?php echo base_url();?>assets/login//fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+<link href="<?php echo base_url();?>assets/login//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>I_Theatrisic</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="<?php echo base_url();?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <link href="<?php echo base_url();?>assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- Plugin CSS -->
-    <link href="<?php echo base_url();?>assets/vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-
-    <!-- Custom styles for this template -->
-    <link href="<?php echo base_url();?>assets/css/freelancer.min.css" rel="stylesheet">
-
-  </head>
+<!-- //web font -->
+</head>
 <body>
-    <br>
-    <br>
-    <br>
-    <center>
-  <div class="container">
-    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-    <br>
-    <br>
-    <div class="jumbotron">
-      <?php echo form_open('Login/cekLogin'); ?>
-        <legend><b>Hi, Orang Baik!</b></legend>
-        <legend>Silahkan login untuk meminjam barang di I_Theatrisic</legend>
-          <?php echo validation_errors()?>
-            <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" class="form-control" id="username" name="username" placeholder="username">
-            </div>
-
-            <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" name="password" placeholder="password">
-            </div>
-            <button type="submit" class="btn btn-large btn-block btn-primary">Masuk</button>
-          </div>
-          <label>Belum punya akun <a href="<?php echo site_url("login/register");?>">Daftar</a></label>
-         <?php echo form_close(); ?>
+<h1>Inventaris Theatrisic</h1>
+<div class="main-agileits">
+<?php echo form_open('Login/cekLogin'); ?>
+<!--form-stars-here-->
+    <div class="form-w3-agile">
+      <h2> login</h2>
+      <?php echo validation_errors()?>
+      <form action="#" method="post">
+        <div class="form-sub-w3">
+          <input type="text" id="username" name="username" placeholder="Customer number or username " required="" />
+        <div class="icon-w3">
+          <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+        </div>
+        <div class="form-sub-w3">
+          <input type="password" id="password" name="password" placeholder="Password" required="" />
+        <div class="icon-w3">
+          <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+        </div>
+        </div>
+        <p class="p-bottom-w3ls">Are you new to inventaris ?<a class="w3_play_icon1" href="#small-dialog1">  Register here</a></p>
+        
+        <div class="submit-w3l">
+          <input type="submit" value="Login">
+        </div>
+        <?php echo form_close(); ?>
+      </form>
     </div>
-  </div>
-  </div>
-  </div>
+<!--//form-ends-here-->
+</div>
+
+
+<div id="small-dialog1" class="mfp-hide">
+          <div class="contact-form1">
+                    <div class="contact-w3-agileits">
+                    <?php echo form_open('Login/register'); ?>
+                    <h3>Register Form</h3>
+                     <?php echo validation_errors()?>
+                      <form action="#" method="post">
+                      <div class="form-sub-w3ls">
+                          <input placeholder="Nama" id="nama" name="nama" type="text" required="">
+                          <div class="icon-agile">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                          </div>
+                        </div>
+                        <div class="form-sub-w3ls">
+                          <input placeholder="Organisasi" id="organisasi" name="organisasi" type="text" required="">
+                          <div class="icon-agile">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                          </div>
+                        </div>
+                        <div class="form-sub-w3ls">
+                          <input placeholder="No Telepon" id="no_hp" name="no_hp" type="text" required="">
+                          <div class="icon-agile">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                          </div>
+                        </div>
+                        <div class="form-sub-w3ls">
+                          <input placeholder="User Name" id="username" name="username" type="text" required="">
+                          <div class="icon-agile">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                          </div>
+                        </div>
+                        
+                        <div class="form-sub-w3ls">
+                          <input placeholder="Password" id="password" name="password" type="password" required="">
+                          <div class="icon-agile">
+                            <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="login-check">
+                       <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><p>I Accept Terms & Conditions</p></label>
+                      </div>
+                    <div class="submit-w3l">
+                      <input type="submit" value="Register">
+                    </div>
+                    </form>
+                    <?php echo form_close(); ?>
+          </div>  
+        </div>
+
+<!-- copyright -->
+  
+  <!-- //copyright --> 
+  <script type="text/javascript" src="<?php echo base_url();?>assets/login/js/jquery-2.1.4.min.js"></script>
+  <!-- pop-up-box -->  
+    <script src="<?php echo base_url();?>assets/login/js/jquery.magnific-popup.js" type="text/javascript"></script>
+  <!--//pop-up-box -->
+  <script>
+    $(document).ready(function() {
+    $('.w3_play_icon,.w3_play_icon1,.w3_play_icon2').magnificPopup({
+      type: 'inline',
+      fixedContentPos: false,
+      fixedBgPos: true,
+      overflowY: 'auto',
+      closeBtnInside: true,
+      preloader: false,
+      midClick: true,
+      removalDelay: 300,
+      mainClass: 'my-mfp-zoom-in'
+    });
+                                    
+    });
+  </script>
+</body>
+</html>
