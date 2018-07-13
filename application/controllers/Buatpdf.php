@@ -13,7 +13,7 @@ class Buatpdf extends CI_Controller {
 		$this->load->library('pdf');
 		$this->load->model('DataBarang_model');
 		$data['data_list'] = $this->DataBarang_model->getDataBarang();
-		$this->pdf->load_view('dataBarang',$data);
+		$this->pdf->load_view('pdf',$data);
 	}
 
 }
