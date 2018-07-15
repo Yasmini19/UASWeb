@@ -142,39 +142,13 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 col-lg-12">
           <div class="tile">
-            <h3 class="tile-title">Date</h3>
+            <center>
+            <h3 class="tile-title">SELAMAT DATANG ADMIN INVENTARIS THETRISIC</h3>
+            <h5>Inventaris Theatrisic merupakan tempat peminjaman barang</h5>
             <div class="embed-responsive embed-responsive-16by9">
               <canvas class="embed-responsive-item" id="lineChartDemo"></canvas>
-
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="tile">
-            <h3 class="tile-title">Support Requests</h3>
-            <div class="embed-responsive embed-responsive-16by9">
-              <canvas class="embed-responsive-item" id="pieChartDemo"></canvas>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="tile">
-            <h3 class="tile-title">Features</h3>
-            
-            
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="tile">
-            <h3 class="tile-title">Compatibility with frameworks</h3>
-            
-          </div>
-        </div>
-      </div>
     </main>
     <!-- Essential javascripts for application to work-->
     <script src="<?php echo base_url();?>asset/admin/js/jquery-3.2.1.min.js"></script>
