@@ -59,7 +59,7 @@
                 <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"> 
             </a>
                 <ul class="dropdown-menu">
-                <li><a href="<?php echo site_url();?>/Login/"><i class="fa fa-user fa-fw"></i> LOGOUT</a></li>
+                <li><a href="<?php echo site_url();?>/Login/logout"><i class="fa fa-user fa-fw"></i> LOGOUT</a></li>
               </ul>
             </div>
             </li>
@@ -79,8 +79,8 @@
           <div class="card-body"> <hr>
             <p class="card-text"><?php echo $value->nama_barang ?></p>
             <?php echo form_open('Pinjam/add')?>
-            <input type="text" value="<?php echo $value->id_barang?>" name="id">
-            <input type="text" value="<?php echo $value->nama_barang?>" name="nama">
+            <input type="hidden" value="<?php echo $value->id_barang?>" name="id">
+            <input type="hidden" value="<?php echo $value->nama_barang?>" name="nama">
         
             <button type="submit" class="btn btn-primary btn-lg " value="Pinjam">Pinjam</button>
           <?php echo form_close()?>

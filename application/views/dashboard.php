@@ -57,7 +57,7 @@
                 <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"> 
             </a>
                 <ul class="dropdown-menu">
-                <li><a href="<?php echo site_url();?>/Login/"><i class="fa fa-user fa-fw"></i> LOGOUT</a></li>
+                <li><a href="<?php echo site_url();?>/Login/logout"><i class="fa fa-user fa-fw"></i> LOGOUT</a></li>
               </ul>
             </div>
             </li>
@@ -69,7 +69,7 @@
     </nav>
 
     <!-- Header -->
-    <header class="masthead text-black text-center" style="background-image:url('<?php echo base_url()?>assets/img/mus.jpg'); height: 800px; ">
+    <header class="masthead text-white text-center" style="background-image:url('<?php echo base_url()?>assets/img/01.jpg'); height: 750px; ">
       <div class="container">
         <!--<img class="img-fluid mb-5 d-block mx-auto" src="assets/img/profile.png" alt="">-->
         <br><br><br><br><br><br><br><br>

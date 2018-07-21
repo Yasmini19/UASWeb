@@ -110,7 +110,7 @@
       <?php 
         echo "Sukses Simpan Data";
         echo "";
-        echo '<br>'.anchor('DataBarang', 'Masukkan Data Lagi'); 
+        echo '<br>'.anchor('DataPeminjaman', 'Masukkan Data Lagi'); 
       ?>
      </div>
    </div>

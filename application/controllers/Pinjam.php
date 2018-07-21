@@ -29,6 +29,8 @@ class Pinjam extends CI_Controller {
 			'rowid' => $this->uri->segment(3),
 			'qty'=>0);
 		$this->cart->update($data);
+		echo '<script>alert("barang dihapus dari keranjang")</script>';
+	 		redirect('Pinjam/cart','refresh');
 	}
 
 	

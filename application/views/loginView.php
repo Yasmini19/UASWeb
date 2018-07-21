@@ -35,7 +35,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       <?php echo validation_errors()?>
       <form action="#" method="post">
         <div class="form-sub-w3">
-          <input type="text" id="username" name="username" placeholder="Customer number or username " required="" />
+          <input type="text" id="username" name="username" placeholder="Username " required="" />
         <div class="icon-w3">
           <i class="fa fa-user" aria-hidden="true"></i>
         </div>

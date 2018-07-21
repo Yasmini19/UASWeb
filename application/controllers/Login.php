@@ -14,11 +14,13 @@
             # code...
             $this->session->unset_userdata('logged_in');
             $this->session->sess_destroy();
-            session_start();
-            unset($_SESSION['cart']);
-            session_destroy();
-            session_unset();
-            redirect('tabel_user','refresh');
+            $this->load->library('cart');
+            $this->cart->destroy();
+            //session_start();
+            //unset($_SESSION['cart']);
+            //session_destroy();
+            //session_unset();
+            redirect('Login','refresh');
         }
 
         public function cekDb($password)

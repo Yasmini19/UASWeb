@@ -77,16 +77,13 @@
         </div>
       </div>
       <ul class="app-menu">
-        <li><a class="app-menu__item" href="<?php echo base_url('index.php/HomeAdmin/')?>"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a></li>
+        <li><a class="app-menu__item active" href="index.html"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a></li>
         
         
-        <li class="treeview"><a class="app-menu__item active" href="<?php echo base_url('index.php/DataBarang/')?>" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Data Barang</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Data Barang</span><i class="treeview-indicator fa fa-angle-right"></i></a>
           
         </li>
         <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Data Peminjaman</span><i class="treeview-indicator fa fa-angle-right"></i></a>
-          
-        </li>
-        <li class="treeview"><a class="app-menu__item" href="<?php echo base_url('index.php/User/getUser')?>" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Data User</span><i class="treeview-indicator fa fa-angle-right"></i></a>
           
         </li>
         
@@ -107,11 +104,37 @@
    <div class="container">
    <div class="jumbotron shadow p-3 mb-5 bg-white rounded">
      
-      <?php 
-        echo "Sukses Simpan Data";
-        echo "";
-        echo '<br>'.anchor('DataBarang', 'Masukkan Data Lagi'); 
-      ?>
+       
+      <div class="container">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <?php echo form_open_multipart('Detail_Pinjam/updateData/'.$this->uri->segment(3)); ?>
+    <legend>Edit Detail Barang</legend>
+    <?php echo validation_errors(); ?>
+    <div class="form-group">
+      <label for="">Id Detail</label>
+      <input type="text" class="form-control" name="id_detail" id="id_detail" value="<?php echo $tabel_detail_pinjam[0]->id_detail?>">
+    </div>
+    <div class="form-group">
+      <label for="">Id Pinjam</label>
+      <input type="text" class="form-control" name="id_pinjam" id="id_pinjam" value="<?php echo $tabel_detail_pinjam[0]->id_pinjam ?>">
+    </div>
+    <div class="form-group">
+      <label for="">Id Barang</label>
+      <input type="text" class="form-control" name="id_barang" id="id_barang" value="<?php echo $tabel_detail_pinjam[0]->id_barang ?>">
+    </div>
+    <div class="form-group">
+      <label for="">Jumlah Pinjam</label>
+      <input type="text" class="form-control" name="jumlah_pinjam" id="jumlah_pinjam" value="<?php echo $tabel_detail_pinjam[0]->jumlah_pinjam ?>">
+    </div>
+    <div class="form-group">
+      <label for="">Status</label>
+      <input type="text" class="form-control" name="status" id="status" value="<?php echo $tabel_detail_pinjam[0]->status ?>">
+    </div>
+      <br>
+    <button type="submit" class="fa fa-paper-plane btn btn-success" aria-hidden="true" >Submit</button>
+    <?php echo form_close(); ?>
+  </div>
+  </div>
      </div>
    </div>
 

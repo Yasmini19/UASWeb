@@ -107,10 +107,10 @@
    <div class="container">
    <div class="jumbotron shadow p-3 mb-5 bg-white rounded">
      
-      <<?php 
+      <?php 
         echo "Sukses Simpan Data";
-
-        echo anchor('DataBarang', 'Masukan Data Lagi'); 
+        echo "";
+        echo '<br>'.anchor('DataBarang', 'Masukkan Data Lagi'); 
       ?>
      </div>
    </div>

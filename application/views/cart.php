@@ -62,7 +62,7 @@
                 <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"> 
             </a>
                 <ul class="dropdown-menu">
-                <li><a href="<?php echo site_url();?>/Login/"><i class="fa fa-user fa-fw"></i> LOGOUT</a></li>
+                <li><a href="<?php echo site_url();?>/Login/logout"><i class="fa fa-user fa-fw"></i> LOGOUT</a></li>
               </ul>
             </div>
             </li>
@@ -90,24 +90,22 @@
           <td><?php echo $key['qty'] ?></td>
 
           <td>
-
                 <button><a href="<?php echo site_url("/Pinjam/delete/".$key['rowid']) ?>" class="fa fa-trash fa-2x" aria-hidden="true"></a></button>
-                
               </td>
          
        </tr>
        <?php endforeach ?>
      </tbody>
    </table>
+
+
    </main>
 
-<div class="container-fluid">
-   <a href="<?php echo base_url('index.php/Pinjam/')?>" type="submit" class="btn btn-primary btn-lg " value="Pinjam" data-toggle="modal" data-target="#modalPinjam" >Pinjam</a>
+<div class="container">
+<br><br><br>
+   <a href="<?php echo base_url('index.php/Pinjam/')?>" class="btn btn-primary btn-lg " value="Pinjam" data-toggle="modal" data-target="#modalPinjam" >Pinjam</a>
+
 </div>
-    <!-- Button trigger modal -->
-
-    
-
 <!-- Modal -->
 <div class="modal fade" id="modalPinjam" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -119,7 +117,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+    <?php echo form_open('CekData/insert')?>
   
   <div class="form-group row">
     <label for="colFormLabel" class="col-sm-2 col-form-label">Keperluan</label>
@@ -139,13 +137,12 @@
       <input type="date" id="tanggal_kembali" name="tanggal_kembali" class="form-control" id="colFormLabel">
     </div>
   </div>
-  
-</form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
       </div>
     </div>
+  <?php echo form_close()?>
   </div>
 </div>
 <!-- Bootstrap core JavaScript -->

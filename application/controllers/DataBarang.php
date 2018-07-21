@@ -41,7 +41,7 @@ class DataBarang extends CI_Controller {
 			else
 			{
 				$this->DataBarang_model->insertDataBarang();
-				$this->load->view('tambah_dataBarang_view');
+				$this->load->view('tambah_dataBarang_data');
 		}
 	}
 }

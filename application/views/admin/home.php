@@ -59,11 +59,11 @@
           </ul>
         </li>
         <!-- User Menu-->
-        <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="fa fa-user fa-lg"></i></a>
+        <li class="dropdown"><a class="app-nav__item" href="<?php echo site_url();?>/Login/logout" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="">Logout</i></a>
           <ul class="dropdown-menu settings-menu dropdown-menu-right">
             <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
             <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-user fa-lg"></i> Profile</a></li>
-            <li><a class="dropdown-item" href="<?php echo site_url();?>/Login/"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+            <li><a class="dropdown-item" href="page-login.html"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
           </ul>
         </li>
       </ul>
@@ -102,10 +102,7 @@
           <h1><i class="fa fa-dashboard"></i> Dashboard</h1>
           <p></p>
         </div>
-        <ul class="app-breadcrumb breadcrumb">
-          <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-          <li class="breadcrumb-item"><a href="">Dashboard</a></li>
-        </ul>
+        
       </div>
       <div class="row">
         <div class="col-md-6 col-lg-3">
@@ -140,15 +137,19 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> 
       <div class="row">
-        <div class="col-md-6 col-lg-12">
-          <div class="tile">
+        <div class="col-md-6 col-lg-12 ">
+          <div class="tile" >
             <center>
+            <br><br><br><br>
             <h3 class="tile-title">SELAMAT DATANG ADMIN INVENTARIS THETRISIC</h3>
             <h5>Inventaris Theatrisic merupakan tempat peminjaman barang</h5>
+            <br><br>
+            <img class="img-fluid" src="<?php echo base_url()?>assets/img/ku.jpg" alt="">
             <div class="embed-responsive embed-responsive-16by9">
               <canvas class="embed-responsive-item" id="lineChartDemo"></canvas>
+
     </main>
     <!-- Essential javascripts for application to work-->
     <script src="<?php echo base_url();?>asset/admin/js/jquery-3.2.1.min.js"></script>

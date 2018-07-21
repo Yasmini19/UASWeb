@@ -92,6 +92,7 @@
           <td><?php echo $key['keperluan'] ?></td>
           <td><?php echo $key['tanggal_pinjam'] ?></td>
           <td><?php echo $key['tanggal_kembali'] ?></td>
+          <td><?php echo $key['status'] ?></td>
          
        </tr>
        <?php endforeach ?>
